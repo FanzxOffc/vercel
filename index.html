@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>E-Learning Madrasah | MTsN 4 JAKARTA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="shortcut icon" href="https://elearning.mtsn4-jakarta.sch.id/public/img/logo.png"/>
+<link rel="stylesheet" type="text/css" href="https://elearning.mtsn4-jakarta.sch.id/__statics/js/alert/alert.css">
+<script src="https://elearning.mtsn4-jakarta.sch.id/__statics/js/jquery.min.js?version=10"></script>
+<script src="https://elearning.mtsn4-jakarta.sch.id/__statics/js/alert/alert.js?version=10"></script>
+<script src="https://elearning.mtsn4-jakarta.sch.id/__statics/versi4/detect.min.js?version=10"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#2D8A6E",
+        secondary: "#1B5E4B",
+        emerald: {500: "#10b981", 600: "#059669"},
+        "background-light": "#F8FAFC"
+      },
+      fontFamily: {sans: ["Inter","sans-serif"]},
+      borderRadius: {'2xl': '16px'},
+      boxShadow: {
+        '3d': '0 10px 30px -5px rgba(0,0,0,0.1), 0 4px 12px -4px rgba(0,0,0,0.05)',
+        'premium-button': '0 10px 15px -3px rgba(16,185,129,0.3), 0 4px 6px -4px rgba(16,185,129,0.2)',
+        'premium-hover': '0 20px 25px -5px rgba(16,185,129,0.4), 0 8px 10px -6px rgba(16,185,129,0.3)'
+      }
+    }
+  }
+};
+</script>
+<style type="text/tailwindcss">
+@layer base { body { @apply bg-background-light text-slate-800; } }
+.btn-emerald-gradient { @apply bg-gradient-to-r from-emerald-500 to-emerald-600; }
+.input-field { @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 transition-all outline-none text-slate-700; }
+</style>
+</head>
+<body class="min-h-screen overflow-y-auto flex flex-col md:flex-row bg-white">
+<div class="hidden md:flex md:w-1/2 min-h-screen bg-white flex-col items-center justify-center p-8 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-64 h-64 bg-emerald-50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+  <div class="relative z-10 w-full max-w-xl text-center space-y-10">    
+    <div class="flex flex-col items-center space-y-4 mt-1 md:mt-2">
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-0">
+        <img src="https://elearning.mtsn4-jakarta.sch.id/public/img/logo.png" alt="Logo Aplikasi" class="h-[84px] md:h-[92px] lg:h-[100px] w-auto object-contain"/>
+                <img src="https://elearning.mtsn4-jakarta.sch.id/public/img/logo.png" alt="Logo Madrasah" class="h-[84px] md:h-[92px] lg:h-[100px] w-auto object-contain"/>
+              </div>
+      <div>
+        <h1 class="text-3xl font-black text-slate-900 tracking-tight">E-LEARNING MADRASAH</h1>
+        <p class="text-lg md:text-xl text-emerald-700 font-extrabold tracking-[0.25em] uppercase mt-1">
+          MTsN 4 JAKARTA        </p>
+      </div>
+      
+    <div class="space-y-2 mb-5 md:mb-16">
+      <p class="text-sm md:text-base font-medium text-slate-600">"Bersama E-Learning Madrasah, Siap Menyongsong Masa Depan Gemilang"</p>
+    </div>
+    </div>
+    <div class="relative group">
+      <div class="absolute -inset-4 bg-emerald-500/5 rounded-3xl blur-2xl group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
+      <img alt="Digital Learning" class="relative z-10 w-full max-w-[160px] md:max-w-[200px] lg:max-w-[230px] xl:max-w-[280px] mx-auto drop-shadow-2xl rounded-2xl" src="https://elearning.mtsn4-jakarta.sch.id/__statics/versi4/img/background.png"/>
+    </div>
+  </div>
+</div>
+<div class="flex-1 md:flex md:w-1/2 min-h-screen bg-slate-50 flex items-center justify-center p-8 pt-20 md:pt-12 md:p-12 overflow-y-auto">
+  <div class="w-full max-w-[420px] space-y-8">
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Selamat Datang</h2>
+      <p class="text-slate-500 mt-2">Silahkan masuk ke akun E-Learning Anda</p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-3d border border-slate-100">
+      <form id="loginmadrasah" action="javascript:void(0)" url="https://elearning.mtsn4-jakarta.sch.id/login/do_login" method="post" class="space-y-6">
+        <input type="hidden" name="ajaran" value="2025">
+        <input type="hidden" name="login_token" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkxSVCJ9.eyJmcCI6ImU1NjJhZjBmYzZhNThmNTE3MWNkZWYxOTYwZGQzMDFiMGMyZTMzMjIiLCJ0cyI6MTc3NjA0OTU3OH0.31mMr2Qb1Go8MMKJRPjq2vsfQw7CSP5sKvQ1sepV2SY">
+        <div class="space-y-2">
+          <label class="text-sm font-bold text-slate-700 flex items-center">
+            <span class="material-symbols-outlined text-emerald-600 text-lg mr-2">person</span>
+            Username
+          </label>
+          <input class="input-field" placeholder="Masukkan NIK/NISN" type="text" name="username" autocomplete="off"/>
+        </div>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="text-sm font-bold text-slate-700 flex items-center">
+              <span class="material-symbols-outlined text-emerald-600 text-lg mr-2">lock</span>
+              Password
+            </label>
+            <a class="text-xs font-bold text-emerald-600 hover:text-emerald-700 forgot-password" href="https://elearning.mtsn4-jakarta.sch.id/login/lupapassword">Lupa Password?</a>
+          </div>
+          <div class="relative">
+            <input class="input-field" placeholder="••••••••" type="password" name="password" autocomplete="off"/>
+            <button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600" type="button">
+              <span class="material-symbols-outlined text-lg">visibility</span>
+            </button>
+          </div>
+        </div>
+        <button class="w-full btn-emerald-gradient text-white py-4 rounded-xl font-black text-sm shadow-premium-button hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center justify-center space-x-3" type="submit">
+          <span class="material-symbols-outlined text-xl">login</span>
+          <span>MASUK SEKARANG</span>
+        </button>
+      </form>
+      <div class="relative my-6">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-slate-100"></div>
+        </div>
+        <div class="relative flex justify-center text-xs">
+          <span class="px-4 bg-white text-slate-400 font-bold uppercase tracking-widest">Opsi Lainnya</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <a href="https://elearning.mtsn4-jakarta.sch.id/login/cbt" class="flex items-center justify-center space-x-2 py-3 px-4 bg-emerald-50 text-emerald-700 rounded-xl text-xs font-bold border border-emerald-100 hover:bg-emerald-100 transition-colors">
+          <span class="material-symbols-outlined text-lg">quiz</span>
+          <span>Ujian CBT</span>
+        </a>
+        <a href="https://elearning.mtsn4-jakarta.sch.id/login/qr" class="flex items-center justify-center space-x-2 py-3 px-4 bg-blue-50 text-blue-700 rounded-xl text-xs font-bold border border-blue-100 hover:bg-blue-100 transition-colors">
+          <span class="material-symbols-outlined text-lg">qr_code_scanner</span>
+          <span>QR Code</span>
+        </a>
+      </div>
+    </div>
+    <p class="text-center text-[10px] text-slate-400 font-medium">© 2026 Hak Cipta Kementerian Agama Republik Indonesia</p>
+  </div>
+</div>
+<div class="md:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md p-4 border-b border-slate-100 flex items-center space-x-3 z-50">
+  <div class="bg-primary p-1.5 rounded-lg">
+    <span class="material-symbols-outlined text-white text-xl">school</span>
+  </div>
+  <div>
+    <h1 class="text-xs font-black text-slate-900 leading-none">E-LEARNING</h1>
+    <p class="text-[8px] text-primary font-bold uppercase tracking-widest">
+      4 JAKARTA    </p>
+  </div>
+</div>
+<script type="text/javascript">
+var base_url="https://elearning.mtsn4-jakarta.sch.id/";
+var madrasah_nama="4 Jakarta";
+var madrasah_jenjang=3;
+var madrasah_status=1;
+function mybrowser(){var result=detect.parse(navigator.userAgent);if(result.browser.family=="Chrome"||result.browser.family=="Chrome Mobile"||result.browser.family=="Safari"||result.browser.family=="Mobile Safari"){}else{}}
+function browsername(){Swal.fire({type:'warning',title:'Browser Not Recommended',showConfirmButton:true,html:"Mohon Gunakan Google Chrome!"});}
+function sukses(param){
+  let timerInterval;
+  try { if (typeof param === 'string') { param = param.trim(); } } catch(e){}
+  Swal.fire({
+    type:'success',
+    title:'Proses Authentication Berhasil ',
+    showConfirmButton:false,
+    html:'Dalam <strong></strong> detik<br>Anda akan dialihkan kedalam aplikasi',
+    timer:500,
+    onBeforeOpen:()=>{Swal.showLoading();timerInterval=setInterval(()=>{Swal.getContent().querySelector('strong').textContent=Swal.getTimerLeft();},100)},
+    onClose:()=>{clearInterval(timerInterval);}
+  }).then((result)=>{
+    if(result.dismiss===Swal.DismissReason.timer){
+      try{
+        var dest=(param||'').trim();
+        if (dest.indexOf('http://')===0 || dest.indexOf('https://')===0) {
+          location.href = dest;
+        } else if (dest.indexOf('/')===0) {
+          location.href = dest;
+        } else {
+          location.href = base_url + dest;
+        }
+        if (window.location && window.location.assign) { window.location.assign(location.href); }
+      } catch(e){
+        try { window.open(base_url + (param||''), '_self'); } catch(e2){}
+      }
+    }
+  });
+}
+function gagal(param){let timerInterval;Swal.fire({type:'warning',title:'Proses Authentication Gagal ',showConfirmButton:true,html:param}).then((result)=>{location.href=base_url;});}
+$(document).on('submit','form#loginmadrasah',function(event,messages){event.preventDefault();var form=$(this);var urlnya=$(this).attr("url");$.ajax({type:"POST",url:urlnya,data:form.serialize(),success:function(response,status,xhr){try{var ct=xhr.getResponseHeader("content-type")||"";var looksJson=(ct.indexOf("application/json")>=0)||typeof response==='object';if(looksJson){var msg=(response&&response.message)?response.message:((typeof response==='string')?response:'Terjadi kesalahan');if(typeof response==='string'&&msg.indexOf('{')<0&&msg.indexOf('}')<0){sukses(msg);}else{gagal(msg);}}else{var dest=(typeof response==='string')?response:'';sukses(dest);}}catch(e){var dest=(typeof response==='string')?response:'';if(dest){sukses(dest);}else{gagal('Gagal login, coba lagi.');}}}});return false;});
+$(document).on('click','a.forgot-password',function(event){event.preventDefault();var jmap={1:"RA",2:"MI",3:"MTs",4:"MA",5:"MAK"};var jtxt=jmap[madrasah_jenjang]||"";var st=(madrasah_status===1?"Negeri":"Swasta");var nm=(typeof madrasah_nama==="string"&&madrasah_nama.length)?madrasah_nama:"Madrasah Anda";var full=[jtxt,st,nm].filter(Boolean).join(" ");Swal.fire({type:"info",title:"Informasi",showConfirmButton:true,confirmButtonText:"Tutup",html:'Silahkan hubungi admin Elearning di <span class="capitalize">'+full+'</span> untuk mendapatkan password.'});});
+window.addEventListener("flutterInAppWebViewPlatformReady",function(event){setInterval(function(){window.flutter_inappwebview.callHandler('FromJS',"none","lockon").then(function(result){});},3000);});
+mybrowser();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"87f1b4e588674e789c71c54c502f359c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
